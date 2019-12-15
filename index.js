@@ -33,8 +33,22 @@ import React from 'react'; // react is a module in your node_modules folder on t
 import ReactDOM from 'react-dom'; // react-dom is a module in your node_modules folder on the left
 
 // Create a react component
+// Must make sure the first HTML tag is on the opening line of the return statement, or place HTML in ()
 const App = function() {
-  return <div>Hi there!</div>;
+  const buttonText = { text: 'Click me' };
+  const labelText = 'Enter name:';
+
+  return (
+    <div>
+     <label htmlFor="name" className="label">
+     {labelText}
+     </label>
+     <input id="name" type="text"/>
+     <button style={{backgroundColor:'blue', color: 'white'}}>
+      {buttonText.text}
+     </button>
+    </div>
+  );
 };
 
 /*
